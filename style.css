@@ -1,0 +1,61 @@
+/*-----GENERAL------*/
+:root{
+    --black: #101010FF;
+    --blackAlpha: #10101099;
+    --white: #FAFAFAFF;
+    --gold: rgb(121, 103, 6);
+    font-family: "Raleway", sans-serif; /* <weight>: Use a value from 100 to 900 */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /*color: var(--white);*/
+}
+
+#navbar{
+    position: sticky;
+    display: flex;
+    flex-direction: row;
+    justify-content:space-around;
+    align-items: center;
+    background-color: var(--blackAlpha);
+    padding: 0.1em .5em;
+    li{
+        display: inline;
+        margin: auto;
+        list-style-type: none;
+    }
+    a{
+        text-decoration: none;
+        padding: 0 .5em;
+    }
+    a:hover{
+            font-size: 1.1em;
+            font-weight: bold;
+            text-shadow: 0 0 3px var(--gold);
+    }
+
+}
+footer{
+    background-color: var(--blackAlpha);
+    text-align: center;
+}
+
+<rs-sbg data-lazyload="//revolver.qodeinteractive.com/wp-content/uploads/2017/02/h5-revolution-img-1.jpg" class="" data-bgcolor="transparent" style="width: 100%; height: 100%;" data-src-rs-ref="//revolver.qodeinteractive.com/wp-content/uploads/2017/02/h5-revolution-img-1.jpg"><canvas style="width: 100%; height: 100%; background-color: transparent; opacity: 1; filter: none;" width="1905" height="789"></canvas></rs-sbg>
+
+
+
+/*
+// <weight>: Use a value from 200 to 700
+// <uniquifier>: Use a unique and descriptive class name
+
+.oswald-<uniquifier> {
+  font-family: "Oswald", sans-serif;
+  font-optical-sizing: auto;
+  font-weight: <weight>;
+  font-style: normal;
+}
+
+*/
