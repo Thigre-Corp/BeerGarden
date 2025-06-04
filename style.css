@@ -4,6 +4,7 @@
     --blackAlpha: #10101099;
     --white: #FAFAFAFF;
     --gold: rgb(197, 157, 95);
+    --goldLight: rgb(201, 171, 127);
     font-family: "Oswald", sans-serif;
 }
 *{
@@ -18,6 +19,8 @@ a{
 }
 p{
     font-family: "Raleway", sans-serif; 
+    line-height: 1.7em;
+    padding: 2em;
 }
 .italic{
     font-family: 'Times New Roman', Times, serif;
@@ -28,6 +31,7 @@ p{
 /*-----HEADER------*/
 #navbar{
     position: fixed;
+    z-index: 3;
     width: 100%;
     height: 3em;
     display: flex;
@@ -48,10 +52,9 @@ p{
     a:hover{
             font-size: 1.1em;
             padding: 0em .5em;
-            font-weight: bold;
+            /*font-weight: bold;*/
             text-shadow: 0 0 0.2em var(--gold);
     }
-
 }
 /*-----MAIN IMAGE------*/
 .main-image{
@@ -65,7 +68,7 @@ p{
     justify-content: center;
     align-items: center;
     img{
-        width: 48vw;
+        width: 40vw;
     }
 }
 /*-----CITATION------*/
@@ -82,20 +85,23 @@ p{
 /*-----TRADITION------*/
 #tradition{
     display: grid;
+    grid-template-columns: 1fr 1fr;
     grid-template-areas: "beertrad beerbaril"
                          "beerglass beerstory";
 }
 #beerbaril{
+    grid-area: beerbaril;
     background-image: url(./img/h5-el-holder-img-1-1.jpg);
 }
 #beerglass{
+    grid-area: beerglass;
     background-image: url(./img/h5-el-holder-img-2.jpg);
 }
 #beertrad, #beerstory{
   margin: auto;
   h2{
         padding: .5em;
-        font-family: "Raleway", sans-serif; 
+        /*font-family: "Raleway", sans-serif; */
         font-size: 2.5em;
         font-weight: bold;
   }
@@ -109,13 +115,16 @@ button{
     border-radius: .5em;
     font-size: 1.2em;
 }
+button:hover{
+    background-color: var(--goldLight);
+}
 /*-----GALERIE------*/
 #galerie{
     display: flex ;
     flex-direction: row;
     img{
         width: 25%;
-        filter : grayscale(100%);
+        /*filter : grayscale(100%);*/
     }
     img:hover{
         animation: 1.5s forwards filter;
@@ -123,10 +132,10 @@ button{
 }
 @keyframes filter {
     from {
-        filter: grayscale(100%);
+        filter: sepia(0%) blur(0%);
     }
     to {
-        filter: grayscale(0%);
+        filter: sepia(100%) blur(2px);
     }
 }
 /*-----SERVICES------*/
@@ -169,7 +178,7 @@ button{
     width: 100%;
     height: 40vh;
     background-color: rgba(0, 0, 0, 0);
-    box-shadow: 0 0 5em 5em rgba(0, 0, 0, 0.473) inset;
+    box-shadow: 0 0 3em 3em rgba(0, 0, 0, 0.473) inset;
 }
 iframe{
     position: relative;
@@ -177,7 +186,7 @@ iframe{
     width: 100%;
     height: 40vh;
     border: none;
-    filter: invert(95%) hue-rotate(180deg);
+    filter: grayscale(80%) sepia(10%); /*invert(95%) hue-rotate(180deg);*/
 
 }
 /*-----FOOTER------*/
@@ -187,4 +196,33 @@ footer{
     text-align: center;
     color: var(--white);
 }
-/*-----END------*/
+/*-----adaptative------*/
+@media only screen and (max-width : 800px) {
+    .services{
+    flex-direction: column;
+        div{
+            padding: 1em;
+        }
+    }
+    #beertrad{
+        grid-area: beertrad;
+    }
+    #beerstory{
+        grid-area: beerstory;
+    }
+    #tradition{
+        grid-template-columns: 1fr ;
+        gap: 20px;
+        grid-template-areas:    'beerbaril'
+                                'beertrad'
+                                'beerglass'
+                                'beerstory';
+    }
+    #galerie{
+        padding-top: 2em;
+        flex-direction: column;
+        img{
+            width: 100vw;
+        }
+    }
+}
