@@ -122,13 +122,38 @@ button:hover{
 #galerie{
     display: flex ;
     flex-direction: row;
-    img{
-        width: 25%;
-        /*filter : grayscale(100%);*/
+    div{
+        position: relative;
+        width: fit-content;
+        img{
+            position: relative;
+            z-index: 1;
+            width: 25vw;
+            /*filter : grayscale(100%);*/
+        }
+        .fa-xmark{
+            position: absolute;
+            top : 50%;
+            left: 50%;
+            transform:translate(-50%,-50%);
+            margin: auto;
+            z-index: 0;
+            color: var(--goldLight);
+            font-size: 10em;
+            /*text-align: center;*/
+
+        }
     }
-    img:hover{
-        animation: 1.5s forwards filter;
+    div:hover{
+        img{
+            animation: .5s forwards ease-in-out filter;
+        }
+        .fa-xmark{
+            z-index: 2;
+            animation: .5s forwards ease-in-out cross;
+        }
     }
+    
 }
 @keyframes filter {
     from {
@@ -136,6 +161,14 @@ button:hover{
     }
     to {
         filter: sepia(100%) blur(2px);
+    }
+}
+@keyframes cross {
+    from {
+        transform: rotate(45deg);
+    }
+    to {
+        transform: rotate(405deg);
     }
 }
 /*-----SERVICES------*/
@@ -197,7 +230,7 @@ footer{
     color: var(--white);
 }
 /*-----adaptative------*/
-@media only screen and (max-width : 800px) {
+@media only screen and (max-width : 900px) {
     .services{
     flex-direction: column;
         div{
@@ -221,7 +254,7 @@ footer{
     #galerie{
         padding-top: 2em;
         flex-direction: column;
-        img{
+        div>img{
             width: 100vw;
         }
     }
