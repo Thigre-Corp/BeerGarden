@@ -29,16 +29,18 @@ p{
     padding: 0.5em;
 }
 /*-----HEADER------*/
+header{
+        background-color: var(--blackAlpha);
+        position: fixed;
+        width: 100vw;
+        z-index: 3;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+}
+
 #navbar{
-    position: fixed;
-    z-index: 3;
-    width: 100vw;
-    height: fit-content;
-    display: flex;
-    flex-direction: row;
-    justify-content:space-around;
-    align-items: center;
-    background-color: var(--blackAlpha);
+    display: inherit;
     color: var(--white);
     padding: 0.2em .5em;
     li{
@@ -55,6 +57,20 @@ p{
             /*font-weight: bold;*/
             text-shadow: 0 0 0.2em var(--gold);
     }
+}
+
+#burger{
+    height: fit-content;
+    display: none;
+    flex-direction: column;
+    padding: 1em;
+   /* z-index: 4;*/
+        background-color: var(--white);
+        border: 2px solid red;
+        border-radius: 10px;
+        color: var(--black);
+        font-size: 1.1em;
+        line-height: 30%;
 }
 /*-----MAIN IMAGE------*/
 .main-image{
@@ -268,7 +284,13 @@ footer{
             width: 100vw;
         }
     }
-    #navbar{
-    height: auto;
+    .menu{
+        display: none;
+    }
+    #burger{
+        display:flex ;
     }
 }
+
+
+/* lecture pour ce soir: https://codepen.io/erikterwan/pen/EVzeRP */
