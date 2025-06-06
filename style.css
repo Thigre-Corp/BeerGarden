@@ -37,6 +37,7 @@ header{
         display: flex;
         flex-direction: row;
         justify-content: space-around;
+        align-items: center;
 }
 
 #navbar{
@@ -59,18 +60,25 @@ header{
     }
 }
 
-#burger{
-    height: fit-content;
+.burger{
     display: none;
     flex-direction: column;
+    height: fit-content;
+    vertical-align: text-top;
     padding: 1em;
-   /* z-index: 4;*/
-        background-color: var(--white);
-        border: 2px solid red;
-        border-radius: 10px;
-        color: var(--black);
-        font-size: 1.1em;
-        line-height: 30%;
+    z-index: 4;
+    background-color: var(--white);
+    border-radius: .3em;
+    color: var(--black);
+    font-size: .3em;
+    line-height: 15%;
+    span{
+        border :.2em solid var(--black);
+        border-radius: .2em;
+        width: 2em;
+        height: .2em;
+        margin: .2em auto;
+    }
 }
 /*-----MAIN IMAGE------*/
 .main-image{
@@ -84,7 +92,9 @@ header{
     justify-content: center;
     align-items: center;
     img{
-        width: 40vw;
+        aspect-ratio: auto;
+        max-height: 80vh;
+        max-width: 80vw;
     }
 }
 /*-----CITATION------*/
@@ -181,12 +191,12 @@ button:hover{
         }
         .fa-xmark{
             z-index: 2;
-            animation: .5s forwards ease-in cross;
+            animation: 2s forwards cross;
         }
     }
     
 }
-/*-----GELLERY ANIMATION-----*/
+/*-----GALLERY ANIMATION-----*/
 @keyframes filter {
     from {
         filter: sepia(0%) blur(0%);
@@ -251,8 +261,7 @@ iframe{
     width: 100%;
     height: 40vh;
     border: none;
-    filter: grayscale(80%) sepia(10%); /*invert(95%) hue-rotate(180deg);*/
-
+    filter: grayscale(80%) sepia(10%);
 }
 /*-----FOOTER------*/
 footer{
@@ -284,12 +293,53 @@ footer{
             width: 100vw;
         }
     }
-    .menu{
+    /*.menu{
         display: none;
+    }*/
+
+    #toggleMenu{
+        display: none;
+        .socials{
+            display: none;
+        }
     }
-    #burger{
-        display:flex ;
+
+    .burgerSign{
+        position: absolute;
+        z-index: 15;
+        background-color: white;
+        display: block;
+        height: 2em;
+        width: 2em ;
+        top: 30%;
+        right: 10vw;
     }
+
+    .burgerLine{
+        z-index: 16;
+        height: calc(fit-content - 2px);
+        border: 1px solid #000000aa;
+    }
+
+    #burgerQuizz{
+        opacity: 0;
+        cursor: pointer;
+    }
+
+    #burgerQuizz:checked ~ #toggleMenu{
+        display: flex;
+        flex-direction: column;
+        ul li{
+            display: flex;
+            flex-direction: column;
+        }
+        .socials{
+            display: flex;
+            flex-direction: column;
+        }
+    }
+
+
 }
 
 
