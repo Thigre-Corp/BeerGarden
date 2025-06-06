@@ -10,20 +10,18 @@
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css" integrity="sha512-Evv84Mr4kqVGRNSgIGL/F/aIDqQb7xQ2vcrdIwxfjThSH8CSR7PBEakCr51Ck+w+/U6swU2Im1vVX0SVk9ABhg==" crossorigin="anonymous" referrerpolicy="no-referrer">
         <link rel="stylesheet" href="style.css">
     </head>
-
     <body>
-        <header>
-            <div id="navbar">
+        <header class="bgBlackAlpha">
+            <div id="navbar" class="textCenter">
                 <h1>
-                    <a href="#navbar">REVOLVER</a>
+                    <a href="#navbar" class="textWhite">REVOLVER</a>
                 </h1>
                 <input type="checkbox" id="burgerQuizz">
                 <label for="burgerQuizz" class="burgerSign" >
-                    <span class="burgerLine"></span>
-                    <span class="burgerLine"></span>
-                    <span class="burgerLine"></span>
+                    <div class="burgerLine"></div>
+                    <div class="burgerLine"></div>
+                    <div class="burgerLine"></div>
                 </label>
-
                 <div id="toggleMenu">
                     <nav class="menu">
                         <ul>
@@ -34,21 +32,25 @@
                                 <a href="#tradition">TRADITION</a>
                             </li>
                             <li>
-                                <a href="#navbar">SERVICES</a>
+                                <a href="#services">SERVICES</a>
                             </li>
                             <li>
                                 <a href="#navbar">MENU</a>
                             </li>
                             <li>
-                                <a href="#navbar">CONTACT</a>
+                                <a href="#galerie">CONTACT</a>
+                            </li>
+                            <li>
+                                <a class="fa-brands fa-x-twitter" href="https://twitter.com"></a>
+                            </li>
+                            <li>
+                                <a class="fa-brands fa-facebook" href="https://facebook.com"></a>
+                            </li>
+                            <li>
+                                <a class="fa-brands fa-instagram" href="https://instagram.com"></a>
                             </li>
                         </ul>
                     </nav>
-                    <div class="socials menu">
-                        <a class="fa-brands fa-x-twitter" href="#navbar"></a>
-                        <a class="fa-brands fa-facebook" href="#navbar"></a>
-                        <a class="fa-brands fa-instagram" href="#navbar"></a>
-                    </div>
                 </div>
             </div>
 
@@ -61,11 +63,11 @@
                 </figure>
             </section>
             <!--bandeau de citation-->
-            <blockquote id="citation">
+            <blockquote id="citation" class="bgGold textWhite">
                 "LOVE AND MAGIC HAVE A GREAT DEAL IN COMMON. THEY ENRICH THE SOUL, DELIGHT THE HEART. AND THEY BOTH TAKE PRATICE."
             </blockquote>
             <!--tradition-->
-            <section id="tradition">
+            <section id="tradition" class="textCenter">
                 <article id="beertrad">
                     <h2>
                         BEER TRADITION
@@ -79,7 +81,7 @@
                         website quickly and with ease. From image galleries to various interactive features you can mix and
                         match all elements.
                     </p>
-                    <button>
+                    <button class="bgGold textWhite">
                         READ MORE
                     </button>
                 </article>
@@ -102,7 +104,7 @@
                         website quickly and with ease. From image galleries to various interactive features you can mix and
                         match all elements.
                     </p>
-                    <button>
+                    <button class="bgGold textWhite">
                         READ MORE
                     </button>
                 </article>
@@ -129,7 +131,7 @@
                 </figure>
             </section>
             <!--services-->
-            <section class="services">
+            <section id="services" class="services textCenter">
                 <div>
                     <picture>
                         <img alt="houblon" src="./img/h5-icon-1.png">
@@ -184,7 +186,7 @@
                 </div>
             </section>
             <!--parallaxe-->
-            <section class="parallaxe">
+            <section class="parallaxe textCenter textWhite">
                 <h2>
                     THIS IS OUR OFFER
                 </h2>
@@ -193,12 +195,10 @@
                 </p>
             </section>
             <!--google maps-->
-            <div class="map">
-            </div>
-                <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=10%20avenue%20de%20bruxelles,%2068100%20Brunstatt-Diddenheim+(REVOLVER)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
-                </iframe>
+            <iframe src="https://maps.google.com/maps?width=100%25&amp;height=600&amp;hl=en&amp;q=10%20avenue%20de%20bruxelles,%2068100%20Brunstatt-Diddenheim+(REVOLVER)&amp;t=&amp;z=15&amp;ie=UTF8&amp;iwloc=B&amp;output=embed">
+            </iframe>
         </main>
-        <footer>
+        <footer class="textCenter textWhite">
            <small>REVOLVER</small> 
         </footer>
     </body>
