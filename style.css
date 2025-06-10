@@ -76,6 +76,18 @@ header{
         top: -0.2em;
         left: 0.2em;
     }
+    .socials{
+        display: inline;
+        position: absolute;
+        top: .3em;
+        right : 2em;
+        a{
+            padding: 2px;
+            border: 2px solid var(--goldLight);
+            border-left: 0;
+            border-top: 0;
+        }
+    }
 }
 /*-----MAIN IMAGE------*/
 .main-image{
@@ -276,6 +288,7 @@ footer{
     #galerie{
         padding-top: 2em;
         flex-direction: column;
+        align-items: center;
         div>img{
             max-width: 100vw;
         }
@@ -290,6 +303,11 @@ footer{
         transition: all 1.5s ease ;
         ul>li{
           display: inherit;
+            padding: 2px;
+            border-bottom: 2px solid var(--goldLight);
+        }
+        .socials{
+            position: static;
         }
     }
     /*-----MENU BURGER-----*/
