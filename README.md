@@ -25,6 +25,7 @@ Ce projet est un **exercice de formation** visant à consolider les compétences
 
 - Pratiquer la structuration HTML sémantique (HTML5)
 - Développer ses compétenses en CSS
+- Importer une bibliothqèeu CDN (FontAwsome)
 - Appliquer la mise en page avec `display: flex | grid` , `position: relative | fixed | absolute`
 - Utiliser les transitions et animations avec `animation: , transition: , @keyframe`
 - Développer un design **responsive** adapté aux **tablettes et smartphones**
@@ -62,11 +63,3 @@ Le code HTML et CSS a été entièrement validé via le **W3C Validator**, garan
 ## 🛠️ Installation locale
 
 Aucune installation particulière n’est requise. Il suffit d’ouvrir le fichier `index.html` dans un navigateur web.
-
-```bash
-# Cloner le dépôt
-git clone https://github.com/Thigre-Corp/BeerGarden.git
-
-# Ouvrir le fichier
-cd BeerGarden
-start index.html  # ou open index.html (Mac)
